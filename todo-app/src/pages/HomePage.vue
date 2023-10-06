@@ -4,7 +4,8 @@ import Sidebar from "../components/Sidebar.vue";
 import { toggleButton } from "../mystore/myStore";
 import Header from "../components/Header.vue";
 import { taskHeader } from "../mystore/taskHeader";
-import CreateTask from "../components/CreateTask.vue"
+import CreateTask from "../components/CreateTask.vue";
+import AllTasks from "../components/AllTasks.vue"
 
 const taskHeaderStore = taskHeader()
 
@@ -24,7 +25,8 @@ const toggle = toggleButton()
             <Header text="Completed Task" v-else-if="taskHeaderStore.completedTask"/>                           
             <Header text="Dashboard" v-else/>
 
-            <CreateTask/>
+            <CreateTask v-if="taskHeaderStore.addTask"/>
+            <AllTasks v-else-if="taskHeaderStore.allTask"/>
         </div>
     </div>
 </template>
