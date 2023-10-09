@@ -3,22 +3,25 @@ import calendar from "../assets/calendar.svg";
 import downArrow from "../assets/down-arrow.svg";
 import edit from "../assets/edit.svg";
 
+const handleForm = async () =>{
+}
+
 </script>
 
 <template>
-    <form class="flex flex-col self-center">
+    <form class="flex flex-col self-center" @submit.prevent="handleForm" >
         <div class="flex justify-evenly">
             <div class="self-center mt-6">
                 <label class="text-[#006D77]">Task Title</label>
                 <div class="flex border-2 border-[#006D77] w-fit py-1 px-2 bg-white rounded mt-3">
-                    <input class="active:outline-none focus:outline-none" placeholder="Task Title"/>
+                    <input class="active:outline-none focus:outline-none pr-[25px]" placeholder="Task Title" type="text"/>
                     <img :src="edit"/>
                 </div>
             </div>
             <div class="self-center mt-6">
                 <label class="text-[#006D77]">End date</label>
                 <div class="flex border-2 border-[#006D77] w-fit py-1 px-2 bg-white rounded mt-3">
-                    <input class="active:outline-none focus:outline-none cursor-pointer w-[250px] date" placeholder="End date" type="date"/>
+                    <input class="active:outline-none focus:outline-none cursor-pointer w-[250px] pr[20px] text-[#006D77]" placeholder="End date" type="date"/>
                 </div>
             </div>
         </div>
@@ -32,10 +35,10 @@ import edit from "../assets/edit.svg";
                             Important
                         </option>
                         <option>
-                            Normal
+                            Slightly Important
                         </option>
                         <option>
-                            Not important
+                            Fairly important
                         </option>
                     </select>
                 </div>
@@ -60,12 +63,12 @@ import edit from "../assets/edit.svg";
         </div>
 
         <div class="self-center mt-6 mb-6">
-            <label class="text-[#006D77]">Priority level</label>
+            <label class="text-[#006D77]">Task Decription</label>
             <div>
                 <textarea placeholder="Write important notes" class="flex border-2 border-[#006D77] h-[100px] pt-1 pl-3 pr-16 bg-white rounded mt-3 w-[710px]"/>
             </div>
         </div>
-        <button class="self-center bg-[#006D77] rounded text-white w-fit py-1 px-6">Add to List</button>
+        <button class="self-center bg-[#006D77] rounded text-white w-fit py-1 px-6" @click="handleForm" type"submit">Add to List</button>
     </form>
 </template>
 
@@ -78,9 +81,4 @@ select {
   padding-right: 20px; 
 
 }
-.date{
-  background: url("../assets/calendar.svg") no-repeat right center;
-  padding-right: 20px; 
-}
-
 </style>
