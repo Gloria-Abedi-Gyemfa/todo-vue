@@ -14,7 +14,7 @@ const toggle = toggleButton()
 </script>
 
 <template>
-    <div class="bg-slate-50 h-screen">
+    <div class="bg-slate-50 h-screen overflow-x-hidden">
         <div class="">
             <Navbar/>
             <Sidebar v-if="toggle.toggleDialogue"/>

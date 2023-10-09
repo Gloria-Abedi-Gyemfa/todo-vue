@@ -3,9 +3,15 @@
     import AllTaskCard from "./AllTaskCard.vue";
     import downArrow from "../assets/downChevron.svg";
     import upArrow from "../assets/upChevron.svg";
+    import TaskDetails from "./TaskDetails.vue";
+
+    const showTaskDetails = () =>{
+        
+    }
+
 </script>
 <template>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col justify-center w-fit m-auto" >
         <div class="flex justify-evenly">
             <div class="flex gap-4">
                 <div class="bg-[#006D77] text-[#FFF] rounded pt-1 px-1 flex gap-1">
@@ -26,9 +32,9 @@
             <SearchTask/>
         </div>
         
-        <div class="my-6 flex  self-center">
+        <div class="my-6 align-center">
             <AllTaskCard/>
         </div>
-        <button class="border-2 border-[#006D77] rounded text-[#006D77] w-fit py-1 px-6 self-center">Load More</button>
+        <TaskDetails/>
     </div>
 </template>

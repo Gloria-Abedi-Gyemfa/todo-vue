@@ -17,7 +17,7 @@ const toddleSidebar = ()=>{
 
 <template>
     <div class="flex justify-between p-6 bg-white shadow w-screen fixed relative t0p-0">
-        <img :src="hamburger" alt="hamburger icon" @click="toddleSidebar"/>
+        <img :src="hamburger" alt="hamburger icon" @click="toddleSidebar" class="cursor-pointer"/>
         <div class="flex gap-6">
             <img :src="notification" alt="notification icon"/>
             <img :src="moon" alt="moon icon for dark mode"/>
