@@ -5,7 +5,7 @@ import { toggleButton } from "../mystore/myStore";
 import Header from "../components/Header.vue";
 import { taskHeader } from "../mystore/taskHeader";
 import CreateTask from "../components/CreateTask.vue";
-import AllTasks from "../components/AllTasks.vue"
+import AllTasks from "../components/AllTasks.vue";
 
 const taskHeaderStore = taskHeader()
 
@@ -19,7 +19,7 @@ const toggle = toggleButton()
             <Navbar/>
             <Sidebar v-if="toggle.toggleDialogue"/>
         </div>
-        <div :class="{'ml-56' : toggle.toggleDialogue}" class=" mt-[16px]">
+        <div :class="{'ml-56' : toggle.toggleDialogue}" class=" mt-[100px]">
             <Header text="Add Task" v-if="taskHeaderStore.addTask"/>
             <Header text="All Task" v-else-if="taskHeaderStore.allTask"/>
             <Header text="Completed Task" v-else-if="taskHeaderStore.completedTask"/>                           

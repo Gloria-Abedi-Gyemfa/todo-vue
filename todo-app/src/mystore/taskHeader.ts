@@ -1,10 +1,5 @@
 import { defineStore } from "pinia";
 
-function main() {
-  let x = 2;
-  return x;
-}
-
 export const taskHeader = defineStore({
   id: "taskHeader",
   state: () => ({

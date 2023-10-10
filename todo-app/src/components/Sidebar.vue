@@ -14,7 +14,7 @@ const taskHeaderStore = taskHeader()
 </script>
 
 <template>
-    <section class="bg-white w-fit h-screen shadow py-4 px-6 fixed transition ease-in-out">
+    <section class="bg-white w-fit h-screen shadow py-4 px-6 fixed transition ease-in-out mt-[90px]">
         <div class="flex gap-6 cursor-pointer" @click="taskHeaderStore.setDashboardHeader(true)">
             <img :src="dashboard" alt="dashboard icon"/>
             <p class="text-lg text-[#006D77]">Dashboard</p>

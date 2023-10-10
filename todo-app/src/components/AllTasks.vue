@@ -3,11 +3,6 @@
     import AllTaskCard from "./AllTaskCard.vue";
     import downArrow from "../assets/downChevron.svg";
     import upArrow from "../assets/upChevron.svg";
-    import TaskDetails from "./TaskDetails.vue";
-
-    const showTaskDetails = () =>{
-        
-    }
 
 </script>
 <template>
@@ -35,6 +30,5 @@
         <div class="my-6 align-center">
             <AllTaskCard/>
         </div>
-        <TaskDetails/>
     </div>
 </template>
